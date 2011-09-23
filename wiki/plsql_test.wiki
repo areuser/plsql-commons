@@ -28,3 +28,17 @@ begin
    pTest.testSuite( 'TST_PLSQL_LOG' ); 
 end; 
 }}}
+
+
+{{{
+procedure t_StringLists
+is 
+  vt1 StringList:= new StringList('A','B');
+  vt2 StringList:= new StringList('A','B','');
+  vt3 StringList:= new StringList('A','B','',null);
+begin
+  pTest.assert(vt1.count = 2,'dat is niet genoeg');
+  pTest.assert(vt2.count = 3,'dat is niet genoeg');
+  pTest.assert(vt3.count = 4,'dat is niet genoeg');
+end;  
+}}}
