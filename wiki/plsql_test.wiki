@@ -22,7 +22,9 @@ The Framework checks the contract for implementing the Unit Test interface in an
 
 *Example:*     
 
-{{{begin 
+{{{
+begin 
    pLog.switchOn; 
    pTest.testSuite( 'TST_PLSQL_LOG' ); 
-end; }}}
+end; 
+}}}
