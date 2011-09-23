@@ -2,7 +2,7 @@
 
 = PLSQL Commons Unit Testing Framework =
 
-Yet on other UnitTest framework, but 
+Strong in simplicity
 
 = PLSQL_TEST (pTest) =
 
