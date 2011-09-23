@@ -14,9 +14,9 @@ programming languages. Automatized tests are one of the cornerstones of a method
 Writing the tests before you write the stored procedure makes you think carefully about its interface, and may improve the design. Each unit test can be seen as a design element specifying classes, methods, and observable behaviour. Automatic tests will give you the courage to refactoring your code without being afraid of breaking anything. The tests also serve the purpose of documentation. They explain in detail what is expected to happen in the stored procedures you write.
                
 _How to?_
-Your test suite is a package, which can contain a setup procedure so you can first prepare the 'world' to make an isolated environment for testing. In the end, whether succeed or fail we should clean up our 'world' to not disturb other tests or code
+Your test suite is a package, which can contain a setup procedure so you can first prepare the 'world' to make an isolated environment for testing. In the end, whether succeed or fail we should clean up our 'world' to not disturb other tests or code.
 
-Checks the contract for implementing the UnitTest Interface, setUp, tearDown, t_"MethodeName"
+The Framework checks the contract for implementing the UnitTest interface in any package you desire: setUp, tearDown and prefix t_'MethodeName'. 
 
 *Example:*     
 begin
