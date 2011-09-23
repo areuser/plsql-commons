@@ -5,7 +5,7 @@
 Log Framework, for logging application behavior, a 100% PLSQL Tool
 
 
-= Details =
+= plsql_log (pLog) =
 
 Add your content here.  Format your content with:
   * Inserting log statements into your code is a low-tech method for debugging it. It may also be the only way because debuggers are not always available or applicable. 
