@@ -1,13 +1,16 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= PLSQL Commons Log package =
 
-Add your content here.
+Log Framework, for logging application behavior, a 100% PLSQL Tool
 
 
 = Details =
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * Inserting log statements into your code is a low-tech method for debugging it. It may also be the only way because debuggers are not always available or applicable. 
+  * Logging behavior can be controlled by switching on and off, setting levels, layouts, labels and outputs.
+  * Out of the box layout can be customized the way you like, printf style.
+  * The target of the log output can be a DBMS_OUTPUT, table, DBMS_PIPE, HTP.
+  * The package is being constantly improved thanks to input from users and code contributed by authors in the community.  
