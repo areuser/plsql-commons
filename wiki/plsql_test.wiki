@@ -22,6 +22,7 @@ The Framework checks the contract for implementing the Unit Test interface in an
 
 *Example:*     
 
+_Running the unit test_
 {{{
 begin 
    pLog.switchOn; 
@@ -29,7 +30,7 @@ begin
 end; 
 }}}
 
-
+_Creating a unit test, within a package_
 {{{
 procedure t_StringLists
 is 
