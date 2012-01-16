@@ -16,7 +16,7 @@ Writing the tests before you write the stored procedure makes you think carefull
                
 _How to?_
 
-Your test suite is a package, which can contain a setup procedure so you can first prepare the 'world' to make an isolated environment for testing. In the end, whether succeed or fail we should tear down our 'world' to not disturb other tests or code. t`_` distinguish unit tests from other procedures in your packages. 
+Your test suite is a package, which can contain a setup procedure so you can first prepare the 'world' to make an isolated environment for testing. In the end, whether succeed or fail we should tear down our 'world' to not disturb other tests or code. t`_` distinguish unit tests from other procedures in your package. 
 
 The Framework checks the contract for implementing the Unit Test interface in any package you desire: setUp, tearDown and prefix t`_` for any pacakge procedure. 
 
