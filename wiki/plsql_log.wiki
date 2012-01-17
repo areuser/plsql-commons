@@ -19,7 +19,8 @@ _How to?_
 
 See for more details TST_PLSQL_LOG unit test suite for PLSQL_LOG.  
 
-Example:
+*Example:*     
+
 
 Run you code in logging mode 
 
