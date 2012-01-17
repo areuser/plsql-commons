@@ -23,7 +23,7 @@ See for more details TST_PLSQL_LOG unit test suite for PLSQL_LOG.
 
 
 Run you code in logging mode 
-
+{{{
 begin
     pLog.switchOn;
     pLog.setDFormat ( pLog.getDFormat ); 
@@ -37,9 +37,9 @@ begin
     pLog.emptyStack;
     pLog.switchOff;
 end; 
-
+}}}
 or 
-
+{{{
 declare
      identifier type.string;
 begin 
@@ -52,3 +52,4 @@ begin
     pTest.assert (trim(pPipe.recieve (identifier)) = 'teststring', 'Debug data should be recieved');
     pLog.switchOff;
 end; 
+}}}
