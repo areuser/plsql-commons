@@ -10,7 +10,7 @@ _What is it all about?_
 
 _How to?_
 
-Template engine depence on other packages like you should read template from file system and therefore it requires.
+Template engine depence on other packages, for example you need to read a template file from operating system and therefore it requires PLSQL_FILE.
  
 {{{ 
 declare 
