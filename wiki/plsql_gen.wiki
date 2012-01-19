@@ -2,11 +2,9 @@
 
 = Template Engine PL/SQL style =
 
-Template engine are designed to separate program logic and presentation into two independent parts. This makes the development of both logic and presentation easier, improves flexibility and eases modification and maintenance.  
-
 _What is it all about?_
 
-
+Template engine are designed to separate program logic and presentation into two independent parts. This makes the development of both logic and presentation easier, improves flexibility and eases modification and maintenance.  
 
 _How to?_
 
