@@ -23,3 +23,5 @@ begin
      plsql_file.putLines ('output.txt', 'TEMPLATE', lOutput, plsql_file.WE8ISO8859P1);
 end;  
 }}} 
+
+{{{Hello World, this is the World according to Dimitri.}}}
