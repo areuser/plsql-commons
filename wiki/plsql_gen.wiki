@@ -4,6 +4,10 @@
 
 Template engine are designed to separate program logic and presentation into two independent parts. This makes the development of both logic and presentation easier, improves flexibility and eases modification and maintenance.  
 
+_What is it all about?_
+
+
+
 _How to?_
 
 Template engine depence on other packages like you should read template from file system and therefore it requires.
