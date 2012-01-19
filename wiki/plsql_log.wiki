@@ -1,4 +1,4 @@
-#summary og Framework, for logging application behavior, a 100% PLSQL Tool
+#summary Framework, for logging application behavior, a 100% PLSQL Tool
 
 = PLSQL Commons Log package =
 
