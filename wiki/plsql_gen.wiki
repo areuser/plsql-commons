@@ -24,4 +24,6 @@ begin
 end;  
 }}} 
 
+outputs
+
 {{{Hello World, this is the World according to Dimitri.}}}
