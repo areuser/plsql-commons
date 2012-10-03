@@ -1,0 +1,24 @@
+create table plsql_tests
+( test_id          number,
+  test_time        timestamp(6),
+  test_identifier  varchar2(200),
+  test_suite       varchar2(200),
+  test_unit        varchar2(200),
+  test_succeeded   varchar2(10),
+  test_error       varchar2(200),
+  test_message     varchar2(4000)
+)
+/
+
+create table plsql_logging
+( log_id        number,
+  log_idenfier  varchar2(200),
+  log_level     varchar2(20),
+  log_stack     varchar2(1000),
+  log_time      timestamp(6),
+  log_text      varchar2(4000)
+)
+/
+
+create sequence s_log_id;
+create sequence s_test_id;
