@@ -29,7 +29,9 @@ end;
 }}} 
 
 input:
+
 {{{Hello %value1%, this is the %value1% according to %value2%.}}}
 
 output:
+
 {{{Hello World, this is the World according to Dimitri.}}}
