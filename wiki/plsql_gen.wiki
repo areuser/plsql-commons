@@ -17,13 +17,14 @@ declare
      lOutput StringList := StringList (); 
      tplName type.string := 'HelloWorld';
 begin
-     pLog.turn_on;
+     plsql_log.switchOn;
      lTemplate := plsql_gen.getTemplate (tplName);
-     lContext := plsql_gen.addContext (lContext, 'value2', 'Dimitri');   
+     plsql_log.debug(pUtil.join (lTemplate)); 
+     lContext := plsql_gen.addContext (lContext, 'value2', 'Dimitri Lambrou');   
      lContext := plsql_gen.addContext (lContext, 'value1', 'World');  
-     lOutput := plsql_gen.merge (lContext, lTemplate); 
-     pLog.debug(pUtil.join (lOutput)); 
-     plsql_file.putLines ('output.txt', 'TEMPLATE', lOutput, plsql_file.WE8ISO8859P1);
+     lOutput  := plsql_gen.merge (lContext, lTemplate); 
+     plsql_log.debug(pUtil.join (lOutput)); 
+     plsql_file.putLines ('output.tpl', 'TEMPLATE', lOutput, plsql_file.WE8ISO8859P1); 
 end;  
 }}} 
 
