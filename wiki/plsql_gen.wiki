@@ -8,7 +8,7 @@ Template engine are designed to separate program logic and presentation into two
 
 _How to?_
 
-Template engine depence on other packages, for example you need to read a template file from operating system and therefore it requires PLSQL_FILE. See emp_adr.sql and emp_adr.tpl example including a template to generating for example table logging triggers.
+Template engine depence on other packages, for example you need to read a template file from operating system and therefore it requires PLSQL_FILE. See emp_adr.sql and emp_adr.tpl example including a template file to generating for example table logging triggers.
  
 {{{ 
 declare 
