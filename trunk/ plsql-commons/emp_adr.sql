@@ -3,14 +3,14 @@ declare
      lTemplate    StringList := StringList ();
      lContext     StringList := StringList ();
      lOutput      StringList := StringList ();
-     tplName      plsql_type.string := 'emp_dollar';
+     tplName      plsql_type.string := 'emp_adr';
      column_list1 plsql_type.string;
      column_list2 plsql_type.string;
      column_list3 plsql_type.string;
      
      cursor c1 is select 'EMP' table_name, 'EMP' short_name, 'EMP$' dollar_table_name from dual;
      cursor c2 is select column_name, data_type from all_tab_columns where table_name = 'EMP';
-begin 
+begin
      plsql_gen.setLocation(fileLoc);
      lTemplate := plsql_gen.getTemplate (tplName);
      
