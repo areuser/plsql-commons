@@ -11,6 +11,7 @@ drop package PLSQL_TEST;
 drop package PLSQL_ERROR;
 drop package PLSQL_TYPE;
 drop package PLSQL_UTIL;
+drop package PLSQL_GEN;
 drop package TST_PLSQL_LOG;
 drop package TST_PLSQL_ERROR;
 drop package TST_PLSQL_UTIL;
