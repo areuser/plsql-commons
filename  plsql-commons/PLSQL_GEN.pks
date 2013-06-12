@@ -1,4 +1,4 @@
-CREATE OR REPLACE PACKAGE ORCA_MT_DATA_OWNER.plsql_gen
+CREATE OR REPLACE PACKAGE plsql_gen
 /**
  * Copyright 2008 the original author or authors.
  *
@@ -15,20 +15,20 @@ CREATE OR REPLACE PACKAGE ORCA_MT_DATA_OWNER.plsql_gen
  * limitations under the License.
  *   
  * Authors     : arnold@reuser.info and dimtri.lambrou@gmail.com
- * Description : Template Engine are designed for separation of business logic from the presentation of data. 
- *               When using code in generation this the important result is higher quality, standardization and a huge excelarion in development. 
+ * Description : Template Engine are designed for separation of business logic from the presentation of data.
+ *               When using code in generation this the important result is higher quality, standardization and a huge excelarion in development.
  *               PLSQL_GEN is a simple yet powerful template engine and a 100% pure PL/SQL.
  * Since       : 1.0
  *    
- */ 
+ */
 as  
 
-   function getLocation return string; 
+   function getLocation return string;
    
    procedure setLocation (loc string);
 
-  /* read template from file */ 
-  function getTemplate (fileName in string) return StringList; 
+  /* read template from file */
+  function getTemplate (fileName in string) return StringList;
 
   /* Maintain the mapping, mapping is always given back */
   function addContext (context in StringList, name in string, value in string) return StringList;
@@ -41,8 +41,8 @@ as
   function SqlTemplate (
     sqlStatement in string,
     columnTempl  in string := null,
-    recordTempl  in string := '<ROW>{1}</ROW>', 
-    rootTempl    in string := '<ROOT>{1}</ROOT>' 
+    recordTempl  in string := '<ROW>{1}</ROW>',
+    rootTempl    in string := '<ROOT>{1}</ROOT>'
   ) return string;
   
 end;
