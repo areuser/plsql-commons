@@ -3,14 +3,14 @@ declare
      lTemplate    StringList := StringList ();
      lContext     StringList := StringList ();
      lOutput      StringList := StringList ();
-     tplName      plsql_type.string := 'emp_adr';
+     tplName      plsql_type.string := 'emp_dollar';
      column_list1 plsql_type.string;
      column_list2 plsql_type.string;
      column_list3 plsql_type.string;
      
      cursor c1 is select 'EMP' table_name, 'EMP' short_name, 'EMP$' dollar_table_name from dual;
      cursor c2 is select column_name, data_type from all_tab_columns where table_name = 'EMP';
-begin
+begin 
      plsql_gen.setLocation(fileLoc);
      lTemplate := plsql_gen.getTemplate (tplName);
      
@@ -21,18 +21,19 @@ begin
      end loop;   
 
      for r2 in c2 loop   
-       column_list1 := column_list1 || plsql_util.printf ('  , {1}
+       column_list1 := column_list1 || plsql_util.printf (', {1}
       ', StringList(r2.column_name));
-       column_list2 := column_list2 || plsql_util.printf ('  , :old.{1}
+       column_list2 := column_list2 || plsql_util.printf (', :old.{1}
       ', StringList(r2.column_name));
      end loop;   
      
+     column_list1 := ltrim(column_list1,',');
      column_list2 := ltrim(column_list2,',');
      
      lContext := plsql_gen.addContext (lContext, 'column_list1', column_list1);  
      lContext := plsql_gen.addContext (lContext, 'column_list2', column_list2);  
      lOutput := plsql_gen.merge (lContext, lTemplate);
      plsql_file.putLines (tplName||'.trg', fileLoc, lOutput, plsql_file.WE8ISO8859P1);     
-     lContext := plsql_gen.clearContext (lContext, 'column_list2');
+     lContext := plsql_gen.clearContext (lContext, 'column_list3');
      lContext := plsql_gen.clearContext (lContext);
 end;
