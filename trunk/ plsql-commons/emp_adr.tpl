@@ -1,7 +1,7 @@
 CREATE OR REPLACE TRIGGER %short_name%_adr AFTER DELETE ON %table_name% FOR EACH ROW
 DECLARE
 /*****************************************************************************
-   NAME: %short_name%_adr 
+   NAME: %short_name%_adr
    PURPOSE:
 
    ADR trigger is generated.
@@ -15,26 +15,21 @@ DECLARE
 BEGIN
   
   declare
-    rLog %short_name%_log_pck.%short_name%_type;
+    rLog transaction_log.store_type;
   begin
-    rLog.action_type        := 'D';
-    rLog.%short_name%_rowid := :old.rowid;
-    rLog.%short_name%_id    := :old.%short_name%_id;
-    %column_list1% 
-    %short_name%_log_pck.store (rLog);
+    rLog.action_type := 'D';
+    rLog.rowid       := :old.rowid;
+    rLog.id          := :old.%short_name%_id; 
+    rLog.entity_type := '%short_name%';
+    transaction_log.store (rLog);
   end;
   
   insert into %dollar_table_name%
-  ( %column_list2% 
+  ( %column_list1% 
   )
   values
-  ( :old.%short_name%_id
-  , %short_name%_log_pck.transaction_id
-  , %short_name%_log_pck.transaction_date
-  , %short_name%_log_pck.transaction_user
-  , %short_name%_log_pck.transaction_action_type
-  %column_list3%
-  ); 
+  ( %column_list2%
+  );
   end;
 END;
 /
