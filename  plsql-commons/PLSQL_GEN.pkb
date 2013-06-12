@@ -1,4 +1,4 @@
-CREATE OR REPLACE PACKAGE BODY ORCA_MT_DATA_OWNER.plsql_gen
+CREATE OR REPLACE PACKAGE BODY plsql_gen
 /**
  * Copyright 2008 the original author or authors.
  *
@@ -22,8 +22,8 @@ CREATE OR REPLACE PACKAGE BODY ORCA_MT_DATA_OWNER.plsql_gen
  */
 as
 
-  fileLoc type.string := 'TEMPLATE';
-  extension type.string := '.tpl';
+  fileLoc plsql_type.string := 'TEMPLATE';
+  extension plsql_type.string := '.tpl';
 
    function getLocation return string
    is begin return fileLoc; end;
@@ -66,8 +66,8 @@ as
      idx        pls_integer;  
      lTemplateKeys StringList := plsql_map.keySet(context);
      idxTpl pls_integer;
-     delimiter  type.string := '%';
-     line       type.string;
+     delimiter  plsql_type.string := '%';
+     line       plsql_type.string;
   begin
      idx := template.first;
      while(idx is not null) loop
@@ -101,7 +101,7 @@ as
       desctbl  dbms_sql.desc_tab
     );
     vDynInfo   rDynInfo;
-    vOutput    type.string;
+    vOutput    plsql_type.string;
     vStatus    integer;
     vData      StringList := StringList(); 
     
@@ -116,7 +116,7 @@ as
       return rDynInfo
     as
       lDynInfo     rDynInfo;
-      lColumnValue type.string;
+      lColumnValue plsql_type.string;
     begin
       dbms_sql.parse (lDynInfo.cur, format (input), dbms_sql.native);
       dbms_sql.describe_columns (lDynInfo.cur,
@@ -134,7 +134,7 @@ as
       return StringList
     is
       lReturn  StringList := new StringList();
-      vReturn  type.string;
+      vReturn  plsql_type.string;
     begin
       for i in 1 .. dynInfo.colcnt
       loop
