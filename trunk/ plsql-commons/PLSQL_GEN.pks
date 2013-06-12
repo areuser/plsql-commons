@@ -37,5 +37,13 @@ as
   /* Render the template with the context into a new StringList */
   function  merge (context in StringList, template in StringList) return StringList;
   
+  /* Render template on multiple levels generating output based on a query */
+  function SqlTemplate (
+    sqlStatement in string,
+    columnTempl  in string := null,
+    recordTempl  in string := '<ROW>{1}</ROW>', 
+    rootTempl    in string := '<ROOT>{1}</ROOT>' 
+  ) return string;
+  
 end;
 /
