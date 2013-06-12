@@ -36,7 +36,7 @@ output:
 
 {{{Hello World, this is the World according to Dimitri Lambrou.}}}
 
-In addition the latest feature is to render a template on multiple levels generating output based on a query.
+In addition the latest feature is to render a template on multiple levels generating output based on a query. The column order is used in the template mapping defined by {...}.
 {{{ 
    select plsql_gen.SqlTemplate ( 
      'select ''04'', deptno, dname, loc from dept'                                                                        
