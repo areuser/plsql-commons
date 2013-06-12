@@ -47,13 +47,13 @@ alter package TST_PLSQL_UTIL compile;
 alter package TST_PLSQL_UTIL compile body;
 
 set serverout on
-begin pLog.switchOn(pLog.LOG_TEST); end; 
+begin plsql_log.switchOn(plsql_log.LOG_TEST); end; 
 /
-begin pTest.runTestSuite ( 'TST_PLSQL_ERROR'); end; 
+begin plsql_test.runTestSuite ( 'TST_PLSQL_ERROR'); end; 
 /
-begin pTest.runTestSuite ( 'TST_PLSQL_UTIL' ); end; 
+begin plsql_test.runTestSuite ( 'TST_PLSQL_UTIL' ); end; 
 /
-begin pTest.runTestSuite ( 'TST_PLSQL_LOG' ); end; 
+begin plsql_test.runTestSuite ( 'TST_PLSQL_LOG' ); end; 
 /
 
 spool off
