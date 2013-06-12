@@ -20,6 +20,8 @@ spool installation.log
 @@TST_PLSQL_UTIL.pkb;
 @@PLSQL_MAP.pks;
 @@PLSQL_MAP.pkb;
+@@PLSQL_GEN.pks;
+@@PLSQL_GEN.pkb;
 @@LISTS.tps; 
 set define on;
 @@syn.sql;
@@ -37,6 +39,8 @@ alter package PLSQL_UTIL compile body;
 alter package PLSQL_TYPE compile;
 alter package PLSQL_MAP compile;
 alter package PLSQL_MAP compile body;
+alter package PLSQL_GEN compile;
+alter package PLSQL_GEN compile body;
 alter package PLSQL_TYPE compile;
 
 alter package TST_PLSQL_LOG compile;
