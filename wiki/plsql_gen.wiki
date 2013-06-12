@@ -35,3 +35,12 @@ input:
 output:
 
 {{{Hello World, this is the World according to Dimitri Lambrou.}}}
+
+In addition the latest feature is to render a template on multiple levels generating output based on a query.
+{{{ 
+   select plsql_gen.SqlTemplate ( 
+     'select ''04'', deptno, dname, loc from dept'                                                                        
+   ,'<input type="radio" name="f{1}" id="f{1}-{2}" value="{4}" checked="checked" /> {3}'
+   ,'{1}','<div data-role="fieldcontain"><fieldset data-role="controlgroup" data-type="horizontal"><legend>Score:</legend>{1}</fieldset></div>') 
+ from dual;
+}}} 
